@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { messages } from '../data/messages';
+import { messages } from '../../data/messages';
 import MessageRow from './MessageRow';
 import TabContainer from './TabContainer';
 

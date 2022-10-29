@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { format } from 'date-fns';
 
 type MessageRowProps = {
   type: 'personal' | 'group';
@@ -72,6 +73,8 @@ const MessageRow: FC<MessageRowProps> = ({
     <div className="w-2 h-2 flex-shrink-0 bg-indicator-red rounded-full"></div>
   );
 
+  const dateFormat = read ? 'MM/dd/yyyy HH:mm' : 'MMMM d, yyyy HH:mm'
+
   const lastMessage =
     type === 'personal' ? (
       <div className="flex items-center justify-between">
@@ -99,13 +102,7 @@ const MessageRow: FC<MessageRowProps> = ({
             {title}
           </p>
           <p className="flex-shrink-0 text-xs leading-5">
-            {lastMsgTime.toLocaleString(undefined, {
-              year: 'numeric',
-              month: read ? 'numeric' : 'long',
-              day: 'numeric',
-              hour: 'numeric',
-              minute: 'numeric',
-            })}
+            {format(lastMsgTime, dateFormat)}
           </p>
         </div>
         <div className="w-full">{lastMessage}</div>
