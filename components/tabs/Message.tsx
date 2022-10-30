@@ -8,19 +8,22 @@ type MessageProps = {
   sender: string;
   time: Date;
   isEdited: boolean;
-  color?: 'orange' | 'green';
+  colorCode: number
 };
 
-const Message: FC<MessageProps> = ({ content, sender, time, isEdited }) => {
+const Message: FC<MessageProps> = ({ content, sender, time, isEdited, colorCode }) => {
+  const senderColor = colorCode % 2 === 0 ? 'text-bubble-green' : 'text-bubble-orange'
+  const messageColor = colorCode % 2 === 0 ? 'bg-chat-green' : 'bg-chat-orange'
+
   return (
     <div
       className={classNames('flex flex-col gap-1 max-w-[80%]', sender === user ? 'self-end' : '')}
     >
-      <p className={classNames('text-sm font-bold', sender === user ? 'text-bubble-purple text-right' : 'text-bubble-green')}>
+      <p className={classNames('text-sm font-bold', sender === user ? 'text-bubble-purple text-right' : senderColor)}>
         {sender === user ? 'You' : sender}
       </p>
       <div className={classNames("flex gap-2", sender === user ? 'flex-row-reverse' : 'flex-row')}>
-        <div className={classNames("flex flex-col p-2 pb-1 min-w-[5rem] rounded", sender === user ? 'bg-chat-purple' : 'bg-chat-green')}>
+        <div className={classNames("flex flex-col p-2 pb-1 min-w-[5rem] rounded", sender === user ? 'bg-chat-purple' : messageColor)}>
           <p className="text-sm">{content}</p>
           <div className="flex items-center gap-1 h-6">
             <p className="text-xs">{format(time, 'HH:mm')}</p>

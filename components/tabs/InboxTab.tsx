@@ -16,17 +16,18 @@ const InboxTab: FC<InboxTabProps> = ({ focused, opened }) => {
 
   useEffect(() => {
     const fetchInbox = async () => {
+      setLoading(true);
       const response = await fetch('/api/inbox', { method: 'GET' });
       const inboxJson = await response.json();
       setInbox(inboxJson);
       setTimeout(() => {
         setLoading(false);
-      }, 500);
+      }, 300);
     };
     if (focused) {
       fetchInbox();
     }
-  }, [focused]);
+  }, [focused, selectedChat]);
 
   useEffect(() => {
     if (!opened) {
@@ -49,7 +50,7 @@ const InboxTab: FC<InboxTabProps> = ({ focused, opened }) => {
     <TabContainer show={focused}>
       {selectedChat ? (
         <Chat
-          chatId={selectedChat.chatId}
+          chatId={selectedChat.id}
           title={selectedChat.title}
           type={selectedChat.type}
           participants={selectedChat.participants}

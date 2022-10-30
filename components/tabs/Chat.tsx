@@ -17,6 +17,7 @@ const Chat: FC<ChatProps> = ({ chatId, type, title, participants, onClose }) => 
   const [chat, setChat] = useState<Chat>();
   const [loading, setLoading] = useState(true);
   const [inputMessage, setInputMessage] = useState('');
+  const [senders, setSenders] = useState<string[]>([user])
 
   useEffect(() => {
     const fetchChat = async () => {
@@ -41,14 +42,14 @@ const Chat: FC<ChatProps> = ({ chatId, type, title, participants, onClose }) => 
     try {
       if (inputMessage.length === 0) return;
       if (!chat) return;
-      const now = format(Date.now(), 'MMMM d, yyyy HH:mm:ss')
+      const now = format(Date.now(), 'yyyy/MM/dd HH:mm:ss')
+      console.log(now);
       const newMessage: Message = {
         content: inputMessage,
         from: user,
-        time: now,
-        lastEdited: now,
-        editHistory: [],
-        read: true,
+        sentAt: now,
+        lastEditedAt: now,
+        editHistory: []
       }
 
       const updatedMessages = [...chat.messages, newMessage]
@@ -60,7 +61,16 @@ const Chat: FC<ChatProps> = ({ chatId, type, title, participants, onClose }) => 
         setChat({ ...chat, messages: updatedMessages })
       }
     } catch (error) {
-      console.log(error)
+      console.error(error)
+    }
+  }
+
+  const updateLastChecked: MouseEventHandler<HTMLButtonElement> = async (e) => {
+    e.preventDefault();
+    const lastCheckedAt = format(Date.now(), 'yyyy/MM/dd HH:mm:ss')
+    const response = await fetch(`api/inbox/${chatId}/check`, { method: 'PATCH', headers:{ 'Content-Type': 'application/json' }, body: JSON.stringify({lastCheckedAt}) })
+    if (response.ok) {
+      onClose();
     }
   }
 
@@ -80,8 +90,8 @@ const Chat: FC<ChatProps> = ({ chatId, type, title, participants, onClose }) => 
 
   return (
     <div className="flex flex-col w-full h-full">
-      <div className="flex items-center h-16 min-h-16 -mx-8 -mt-6 px-6 py-3 border-b border-b-accent">
-        <button className="btn btn-square btn-ghost btn-sm">
+      <div className="flex items-center gap-2 h-16 min-h-16 -mx-8 -mt-6 px-6 py-3 border-b border-b-accent">
+        <button onClick={updateLastChecked} className="btn btn-square btn-ghost btn-sm">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -96,7 +106,7 @@ const Chat: FC<ChatProps> = ({ chatId, type, title, participants, onClose }) => 
           </svg>
         </button>
         {titleSec}
-        <button onClick={onClose} className="btn btn-square btn-ghost btn-sm">
+        <button onClick={updateLastChecked} className="btn btn-square btn-ghost btn-sm">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -117,15 +127,24 @@ const Chat: FC<ChatProps> = ({ chatId, type, title, participants, onClose }) => 
           <LoadingSpinner text="Loading Chat..." />
         )
         : chat ? (
-          chat.messages.map((msg, idx) => (
-            <MessageComp
-              key={idx}
-              content={msg.content}
-              isEdited={msg.editHistory.length > 0}
-              sender={msg.from}
-              time={new Date(msg.time)}
-            />
-          ))
+          chat.messages.map((msg, idx) => {
+            let senderIdx = senders.findIndex((s) => s === msg.from)
+            if (senderIdx < 0) {
+              setSenders([...senders, msg.from])
+              senderIdx = senders.length - 1;
+            }
+
+            return (
+              <MessageComp
+                key={idx}
+                content={msg.content}
+                isEdited={msg.editHistory.length > 0}
+                sender={msg.from}
+                time={new Date(msg.sentAt)}
+                colorCode={senderIdx}
+              />
+            )
+          })
         ) : (
           <p className='mt-16'>No message yet.</p>
         )}

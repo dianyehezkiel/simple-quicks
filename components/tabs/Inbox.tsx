@@ -59,13 +59,13 @@ const Inbox: FC<InboxProps> = ({ inbox, loading, selectChat }) => {
             {filteredInbox.map((chat) => {
               return (
                 <ChatRow
-                  key={chat.chatId}
+                  key={chat.id}
                   type={chat.type}
                   title={chat.title}
                   lastMsg={chat.lastMsg}
-                  lastMsgTime={new Date(chat.lastMsgTime)}
+                  lastMsgAt={new Date(chat.lastMsgAt)}
                   lastMsgFrom={chat.lastMsgFrom}
-                  read={chat.read}
+                  lastCheckedAt={new Date(chat.lastCheckedAt)}
                   onClick={() => selectChat(chat)}
                 />
               );

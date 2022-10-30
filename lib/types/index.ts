@@ -4,30 +4,30 @@ export type ChatType = 'personal' | 'group';
 
 export type Message = {
   content: string;
-  time: string;
-  lastEdited: string;
+  sentAt: string;
+  lastEditedAt: string;
   editHistory: Array<{
     content: string;
     edited: string;
   }>;
   from: string;
-  read: boolean;
 };
 
 export interface Chat {
   id: number;
   participants: number;
+  lastCheckedAt: string;
   messages: Message[];
 }
 
 export interface ChatInbox {
-  chatId: number;
+  id: number;
   type: ChatType;
   title: string;
   lastMsg: string;
-  lastMsgFrom?: string;
-  lastMsgTime: string;
-  read: boolean;
+  lastMsgFrom: string;
+  lastMsgAt: string;
+  lastCheckedAt: string;
   participants: number;
 }
 

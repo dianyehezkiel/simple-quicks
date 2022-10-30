@@ -1,13 +1,13 @@
 import { FC } from 'react';
-import { format } from 'date-fns';
+import { compareAsc, format } from 'date-fns';
 
 type ChatRowProps = {
   type: 'personal' | 'group';
   title: string;
   lastMsg: string;
   lastMsgFrom?: string;
-  lastMsgTime: Date;
-  read: boolean;
+  lastMsgAt: Date;
+  lastCheckedAt: Date;
   onClick: () => void;
 };
 
@@ -16,10 +16,17 @@ const ChatRow: FC<ChatRowProps> = ({
   title,
   lastMsg,
   lastMsgFrom,
-  lastMsgTime,
-  read,
+  lastMsgAt,
+  lastCheckedAt,
   onClick,
 }) => {
+  const haveRead = compareAsc(lastCheckedAt, lastMsgAt) > 0 ? true : false;
+  console.log(
+    `${title}:
+    lastCheckedAt: ${lastCheckedAt}
+    lastMsgAt: ${lastMsgAt}
+    lastChecked > lastMsg: ${compareAsc(lastCheckedAt, lastMsgAt)}`
+  )
   const profilePic =
     type === 'personal' ? (
       <div className="flex justify-center relative w-12 h-8">
@@ -71,17 +78,17 @@ const ChatRow: FC<ChatRowProps> = ({
       </div>
     );
 
-  const readIndicator = read ? null : (
+  const newMsgIndicator = haveRead ? null : (
     <div className="w-2 h-2 flex-shrink-0 bg-indicator-red rounded-full"></div>
   );
 
-  const dateFormat = read ? 'MM/dd/yyyy HH:mm' : 'MMMM d, yyyy HH:mm'
+  const dateFormat = haveRead ? 'MM/dd/yyyy HH:mm' : 'MMMM d, yyyy HH:mm'
 
   const lastMessage =
     type === 'personal' ? (
       <div className="flex items-center justify-between">
         <p className="text-xs line-clamp-1">{lastMsg}</p>
-        {readIndicator}
+        {newMsgIndicator}
       </div>
     ) : (
       <div className="flex flex-col gap-1">
@@ -90,7 +97,7 @@ const ChatRow: FC<ChatRowProps> = ({
         </p>
         <div className="flex items-center justify-between">
           <p className="text-xs line-clamp-1">{lastMsg}</p>
-          {readIndicator}
+          {newMsgIndicator}
         </div>
       </div>
     );
@@ -104,7 +111,7 @@ const ChatRow: FC<ChatRowProps> = ({
             {title}
           </p>
           <p className="flex-shrink-0 text-xs leading-5">
-            {format(lastMsgTime, dateFormat)}
+            {format(lastMsgAt, dateFormat)}
           </p>
         </div>
         <div className="w-full">{lastMessage}</div>

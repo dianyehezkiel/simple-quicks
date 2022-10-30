@@ -1,5 +1,5 @@
-import { NextApiHandler } from "next";
-import { SERVER_URL } from "../../../lib/constants";
+import { NextApiHandler } from 'next';
+import { SERVER_URL } from '../../../lib/constants';
 
 const inboxHandler: NextApiHandler = async (req, res) => {
   try {
@@ -15,8 +15,8 @@ const inboxHandler: NextApiHandler = async (req, res) => {
     }
   } catch (error) {
     console.log(error);
-    res.status(500).json({ error: "There is a problem on our side." })
+    res.status(500).json({ error: 'There is a problem on our side.' });
   }
-}
+};
 
-export default inboxHandler; 
+export default inboxHandler;

@@ -10,12 +10,6 @@ import styles from '../styles/Home.module.css'
 import Quicks from '../components/Quicks'
 
 const Home: NextPage = () => {
-  const [showButtons, setShowButtons] = useState(false);
-  const [showLabels, setShowLabels] = useState(false);
-  const [showMainButton, setShowMainButton] = useState(true);
-  const [showInbox, setShowInbox] = useState(false);
-  const [showTask, setShowTask] = useState(false);
-
   return (
     <div className={styles.container}>
       <Head>
@@ -29,10 +23,7 @@ const Home: NextPage = () => {
           Welcome to Quicks
         </h1>
         
-      <Quicks />
-      
-      <InboxTab show={showInbox} />
-      <TaskTab show={showTask} />
+        <Quicks />
       </main>
     </div>
   )
