@@ -1,0 +1,264 @@
+{
+  "chats": [
+    {
+      "id": 1,
+      "participants": 3,
+      "messages": [
+        {
+          "content": "Just fill me in for his update yea?",
+          "time": "2022/10/29 19:31:00",
+          "lastEdited": "2022/10/29 19:31:00",
+          "editHistory": [],
+          "from": "Mary Hilda",
+          "read": true
+        },
+        {
+          "content": "No worries, it will be completed ASAP. I've asked him yesterday.",
+          "time": "2022/10/29 19:32:00",
+          "lastEdited": "2022/10/29 19:32:00",
+          "editHistory": [],
+          "from": "Dian Yehezkiel",
+          "read": true
+        },
+        {
+          "content": "Hello Obaidullah, I will be your case advisor for case #029290.",
+          "time": "2022/10/30 09:32:00",
+          "lastEdited": "2022/10/30 09:32:00",
+          "editHistory": [],
+          "from": "Mary Hilda",
+          "read": true
+        },
+        {
+          "content": "Please contact Mary for questions regarding the case bcs she will be managing your forms from now on! Thanks Mary.",
+          "time": "2022/10/30 09:33:00",
+          "lastEdited": "2022/10/30 09:33:00",
+          "editHistory": [],
+          "from": "Dian Yehezkiel",
+          "read": true
+        },
+        {
+          "content": "Sure thing, Dian",
+          "time": "2022/10/30 09:33:20",
+          "lastEdited": "2022/10/30 09:33:40",
+          "editHistory": [
+            {
+              "content": "Surething, Dyan",
+              "edited": "2022/10/30 09:33:20"
+            }
+          ],
+          "from": "Mary Hilda",
+          "read": true
+        },
+        {
+          "content": "Morning, I'll try to do them. Thanks!",
+          "time": "2022/10/30 09:34:00",
+          "lastEdited": "2022/10/30 09:34:00",
+          "editHistory": [],
+          "from": "Obaidullah Amarkhil",
+          "read": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "participants": 3,
+      "messages": [
+        {
+          "content": "Just fill me in for his update yea?",
+          "time": "2022/10/29 19:31:00",
+          "lastEdited": "2022/10/29 19:31:00",
+          "editHistory": [],
+          "from": "Mary Hilda",
+          "read": true
+        },
+        {
+          "content": "No worries, it will be completed ASAP. I've asked him yesterday.",
+          "time": "2022/10/29 19:32:00",
+          "lastEdited": "2022/10/29 19:32:00",
+          "editHistory": [],
+          "from": "Dian Yehezkiel",
+          "read": true
+        },
+        {
+          "content": "Hello Obaidullah, I will be your case advisor for case #029290.",
+          "time": "2022/10/30 09:32:00",
+          "lastEdited": "2022/10/30 09:32:00",
+          "editHistory": [],
+          "from": "Mary Hilda",
+          "read": true
+        },
+        {
+          "content": "Please contact Mary for questions regarding the case bcs she will be managing your forms from now on! Thanks Mary.",
+          "time": "2022/10/30 09:33:00",
+          "lastEdited": "2022/10/30 09:33:00",
+          "editHistory": [],
+          "from": "Dian Yehezkiel",
+          "read": true
+        },
+        {
+          "content": "Sure thing, Dian",
+          "time": "2022/10/30 09:33:40",
+          "lastEdited": "2022/10/30 09:33:40",
+          "editHistory": [],
+          "from": "Mary Hilda",
+          "read": true
+        },
+        {
+          "content": "Morning, I'll try to do them. Thanks!",
+          "time": "2022/10/30 09:34:00",
+          "lastEdited": "2022/10/30 09:34:00",
+          "editHistory": [],
+          "from": "Obaidullah Amarkhil",
+          "read": true
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "participants": 3,
+      "messages": [
+        {
+          "content": "Just fill me in for his update yea?",
+          "time": "2022/10/29 19:31:00",
+          "lastEdited": "2022/10/29 19:31:00",
+          "editHistory": [],
+          "from": "Mary Hilda",
+          "read": true
+        },
+        {
+          "content": "No worries, it will be completed ASAP. I've asked him yesterday.",
+          "time": "2022/10/29 19:32:00",
+          "lastEdited": "2022/10/29 19:32:00",
+          "editHistory": [],
+          "from": "Dian Yehezkiel",
+          "read": true
+        },
+        {
+          "content": "Hello Obaidullah, I will be your case advisor for case #029290.",
+          "time": "2022/10/30 09:32:00",
+          "lastEdited": "2022/10/30 09:32:00",
+          "editHistory": [],
+          "from": "Mary Hilda",
+          "read": true
+        },
+        {
+          "content": "Please contact Mary for questions regarding the case bcs she will be managing your forms from now on! Thanks Mary.",
+          "time": "2022/10/30 09:33:00",
+          "lastEdited": "2022/10/30 09:33:00",
+          "editHistory": [],
+          "from": "Dian Yehezkiel",
+          "read": true
+        },
+        {
+          "content": "Sure thing, Dian",
+          "time": "2022/10/30 09:33:40",
+          "lastEdited": "2022/10/30 09:33:40",
+          "editHistory": [],
+          "from": "Mary Hilda",
+          "read": true
+        },
+        {
+          "content": "Morning, I'll try to do them. Thanks!",
+          "time": "2022/10/30 09:34:00",
+          "lastEdited": "2022/10/30 09:34:00",
+          "editHistory": [],
+          "from": "Obaidullah Amarkhil",
+          "read": false
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "messages": [
+        {
+          "content": "Just fill me in for his update yea?",
+          "time": "2022/10/29 19:31:00",
+          "lastEdited": "2022/10/29 19:31:00",
+          "editHistory": [],
+          "from": "FastVisa Support",
+          "read": true
+        },
+        {
+          "content": "No worries, it will be completed ASAP. I've asked him yesterday.",
+          "time": "2022/10/29 19:32:00",
+          "lastEdited": "2022/10/29 19:32:00",
+          "editHistory": [],
+          "from": "Dian Yehezkiel",
+          "read": true
+        },
+        {
+          "content": "Hello Obaidullah, I will be your case advisor for case #029290.",
+          "time": "2022/10/30 09:32:00",
+          "lastEdited": "2022/10/30 09:32:00",
+          "editHistory": [],
+          "from": "FastVisa Support",
+          "read": true
+        },
+        {
+          "content": "Please contact Mary for questions regarding the case bcs she will be managing your forms from now on! Thanks Mary.",
+          "time": "2022/10/30 09:33:00",
+          "lastEdited": "2022/10/30 09:33:00",
+          "editHistory": [],
+          "from": "Dian Yehezkiel",
+          "read": true
+        },
+        {
+          "content": "Sure thing, Dian",
+          "time": "2022/10/30 09:33:40",
+          "lastEdited": "2022/10/30 09:33:40",
+          "editHistory": [],
+          "from": "FastVisa Support",
+          "read": true
+        },
+        {
+          "content": "Morning, I'll try to do them. Thanks!",
+          "time": "2022/10/30 09:34:00",
+          "lastEdited": "2022/10/30 09:34:00",
+          "editHistory": [],
+          "from": "FastVisa Support",
+          "read": true
+        }
+      ]
+    }
+  ],
+  "inbox": [
+    {
+      "chatId": 1,
+      "type": "group",
+      "title": "109220-Naturalization",
+      "lastMsg": "Morning, I'll try to do them. Thanks!",
+      "lastMsgTime": "2022/10/30 09:34:00",
+      "lastMsgFrom": "Obaidullah Amarkhil",
+      "read": false,
+      "participants": 3
+    },
+    {
+      "chatId": 2,
+      "type": "group",
+      "title": "Jeannette Moraima Guaman Chamba (Hutto I-589)",
+      "lastMsg": "Morning, I'll try to do them. Thanks!",
+      "lastMsgTime": "2022/10/30 09:34:00",
+      "lastMsgFrom": "Obaidullah Amarkhil",
+      "read": true,
+      "participants": 3
+    },
+    {
+      "chatId": 3,
+      "type": "group",
+      "title": "8405-Diana Salazar Munguia",
+      "lastMsg": "Morning, I'll try to do them. Thanks!",
+      "lastMsgTime": "2022/10/30 09:34:00",
+      "lastMsgFrom": "Obaidullah Amarkhil",
+      "read": false,
+      "participants": 3
+    },
+    {
+      "chatId": 4,
+      "type": "personal",
+      "title": "FastVisa Support",
+      "lastMsg": "Morning, I'll try to do them. Thanks!",
+      "lastMsgTime": "2022/10/30 09:34:00",
+      "read": true
+    }
+  ]
+}
