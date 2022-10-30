@@ -1,4 +1,5 @@
 import { FC, MouseEventHandler } from 'react';
+import { classNames } from '../../lib/utils';
 
 type InboxButtonProps = {
   showButton: boolean;
@@ -15,29 +16,34 @@ const InboxButton: FC<InboxButtonProps> = ({
   focused,
   onClick,
 }) => {
-  const showHideButton = showButton
-    ? '-rotate-0 -translate-x-[5.25rem]'
-    : 'rotate-0 translate-x-0 delay-100';
-
-  const showHideLabel = showLabel
-    ? 'translate-y-0 opacity-100 delay-150'
-    : 'translate-y-12 opacity-0';
-
-  const zoomButton = focused
-    ? 'w-16 h-16 bg-indicator-purple hover:bg-indicator-purple'
-    : 'w-14 h-14';
-
   return (
     <div
-      className={`fixed flex flex-col gap-3 items-center justify-between transition-transform ease-in 
-      ${opened ? ' bottom-6 right-8 z-50' : 'bottom-7 right-9'} ${showHideButton}`}
+      className={classNames(
+        'fixed flex flex-col gap-3 items-center justify-between transition-transform ease-in',
+        showButton && !focused
+          ? '-rotate-0 -translate-x-[5.25rem]'
+          : 'rotate-0 translate-x-0',
+        showButton ? '' : 'delay-100',
+        focused ? 'bottom-6 right-8 z-50 translate-x-0' : 'bottom-7 right-9',
+      )}
     >
-      <p className={`transition-all ease-in duration-100 ${showHideLabel}`}>
+      <p
+        className={classNames(
+          'transition-all ease-in duration-100',
+          showLabel
+            ? 'translate-y-0 opacity-100 delay-150'
+            : 'translate-y-12 opacity-0',
+        )}
+      >
         Inbox
       </p>
       <button
         onClick={onClick}
-        className={`btn btn-circle transition-all border-none ${zoomButton}`}
+        className={classNames(
+          `btn btn-circle transition-all border-none`,
+          focused ? 'w-16 h-16' : 'w-14 h-14',
+          opened ? 'bg-indicator-purple hover:bg-indicator-purple' : '',
+        )}
       >
         <svg
           className={opened ? 'fill-white' : 'fill-indicator-purple'}

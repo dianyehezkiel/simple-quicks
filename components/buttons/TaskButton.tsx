@@ -1,4 +1,5 @@
 import { FC, MouseEventHandler } from 'react';
+import { classNames } from '../../lib/utils';
 
 type TaskButtonProps = {
   showButton: boolean;
@@ -15,27 +16,35 @@ const TaskButton: FC<TaskButtonProps> = ({
   focused,
   onClick,
 }) => {
-  const showHideButton = showButton
-    ? '-rotate-0 -translate-x-[10.25rem]'
-    : 'rotate-0 translate-x-0 delay-100';
-
-  const showHideLabel = showLabel
-    ? 'translate-y-0 opacity-100 delay-150'
-    : 'translate-y-12 opacity-0';
-
-  const zoomButton = focused
-    ? 'w-16 h-16 bg-indicator-orange hover:bg-indicator-orange'
-    : 'w-14 h-14';
-
   return (
     <div
-      className={`fixed flex flex-col gap-3 items-center justify-between transition-transform ease-in 
-      ${opened ? ' bottom-6 right-8 z-50' : 'bottom-7 right-9'} ${showHideButton}`}
+      className={classNames(
+        'fixed flex flex-col gap-3 items-center justify-between transition-transform ease-in',
+        showButton && !focused
+          ? '-rotate-0 -translate-x-[10.25rem]'
+          : 'rotate-0 translate-x-0',
+          showButton ? '' : 'delay-100',
+        focused ? 'bottom-6 right-8 z-50 translate-x-0' : 'bottom-7 right-9',
+      )}
     >
-      <p className={`transition-all ease-in duration-100 ${showHideLabel}`}>
+      <p
+        className={classNames(
+          'transition-all ease-in duration-100',
+          showLabel
+            ? 'translate-y-0 opacity-100 delay-150'
+            : 'translate-y-12 opacity-0',
+        )}
+      >
         Task
       </p>
-      <button onClick={onClick} className={`btn btn-circle transition-all border-none ${zoomButton}`}>
+      <button
+        onClick={onClick}
+        className={classNames(
+          `btn btn-circle transition-all border-none`,
+          focused ? 'w-16 h-16' : 'w-14 h-14',
+          opened ? 'bg-indicator-orange hover:bg-indicator-orange' : '',
+        )}
+      >
         <svg
           className={opened ? 'fill-white' : 'fill-indicator-orange'}
           width="26"

@@ -1,22 +1,24 @@
 import { FC } from 'react';
 import { format } from 'date-fns';
 
-type MessageRowProps = {
+type ChatRowProps = {
   type: 'personal' | 'group';
   title: string;
   lastMsg: string;
   lastMsgFrom?: string;
   lastMsgTime: Date;
   read: boolean;
+  onClick: () => void;
 };
 
-const MessageRow: FC<MessageRowProps> = ({
+const ChatRow: FC<ChatRowProps> = ({
   type,
   title,
   lastMsg,
   lastMsgFrom,
   lastMsgTime,
   read,
+  onClick,
 }) => {
   const profilePic =
     type === 'personal' ? (
@@ -78,7 +80,7 @@ const MessageRow: FC<MessageRowProps> = ({
   const lastMessage =
     type === 'personal' ? (
       <div className="flex items-center justify-between">
-        <p className="text-xs leading-none line-clamp-1">{lastMsg}</p>
+        <p className="text-xs line-clamp-1">{lastMsg}</p>
         {readIndicator}
       </div>
     ) : (
@@ -87,16 +89,16 @@ const MessageRow: FC<MessageRowProps> = ({
           {lastMsgFrom}:
         </p>
         <div className="flex items-center justify-between">
-          <p className="text-xs leading-none line-clamp-1">{lastMsg}</p>
+          <p className="text-xs line-clamp-1">{lastMsg}</p>
           {readIndicator}
         </div>
       </div>
     );
 
   return (
-    <div className="flex gap-4 w-full py-[1.375rem] border-b last:border-b-0 border-b-accent">
+    <div onClick={onClick} className="flex gap-4 w-full py-[1.375rem] border-b last:border-b-0 border-b-accent">
       <div>{profilePic}</div>
-      <div className="flex flex-col gap-2 w-full">
+      <div className="flex flex-col gap-2 w-full select-none cursor-pointer">
         <div className="flex gap-4 w-full">
           <p className="flex-grow-1 line-clamp-2 font-bold leading-tight text-primary">
             {title}
@@ -111,4 +113,4 @@ const MessageRow: FC<MessageRowProps> = ({
   );
 };
 
-export default MessageRow;
+export default ChatRow;

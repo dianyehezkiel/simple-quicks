@@ -2,13 +2,14 @@ import { FC } from "react";
 import TabContainer from "./TabContainer";
 
 type TaskTabProps = {
-  show: boolean,
+  focused: boolean;
+  opened: boolean;
 }
 
-const TaskTab: FC<TaskTabProps> = ({ show }) => {
+const TaskTab: FC<TaskTabProps> = ({ focused, opened }) => {
   return (
-    <TabContainer show={show}>
-      <div className="flex justify-center w-[32rem] h-[32rem]">
+    <TabContainer show={focused}>
+      <div className="flex justify-center w-full h-full">
         <p className="text-lg h-full">Task Tab</p>
       </div>
     </TabContainer>
