@@ -1,22 +1,32 @@
 import { FC } from 'react';
+import { compareAsc, format } from 'date-fns';
 
-type MessageRowProps = {
+type ChatRowProps = {
   type: 'personal' | 'group';
   title: string;
   lastMsg: string;
   lastMsgFrom?: string;
-  lastMsgTime: Date;
-  read: boolean;
+  lastMsgAt: Date;
+  lastCheckedAt: Date;
+  onClick: () => void;
 };
 
-const MessageRow: FC<MessageRowProps> = ({
+const ChatRow: FC<ChatRowProps> = ({
   type,
   title,
   lastMsg,
   lastMsgFrom,
-  lastMsgTime,
-  read,
+  lastMsgAt,
+  lastCheckedAt,
+  onClick,
 }) => {
+  const haveRead = compareAsc(lastCheckedAt, lastMsgAt) > 0 ? true : false;
+  console.log(
+    `${title}:
+    lastCheckedAt: ${lastCheckedAt}
+    lastMsgAt: ${lastMsgAt}
+    lastChecked > lastMsg: ${compareAsc(lastCheckedAt, lastMsgAt)}`
+  )
   const profilePic =
     type === 'personal' ? (
       <div className="flex justify-center relative w-12 h-8">
@@ -68,15 +78,17 @@ const MessageRow: FC<MessageRowProps> = ({
       </div>
     );
 
-  const readIndicator = read ? null : (
+  const newMsgIndicator = haveRead ? null : (
     <div className="w-2 h-2 flex-shrink-0 bg-indicator-red rounded-full"></div>
   );
+
+  const dateFormat = haveRead ? 'MM/dd/yyyy HH:mm' : 'MMMM d, yyyy HH:mm'
 
   const lastMessage =
     type === 'personal' ? (
       <div className="flex items-center justify-between">
-        <p className="text-xs leading-none line-clamp-1">{lastMsg}</p>
-        {readIndicator}
+        <p className="text-xs line-clamp-1">{lastMsg}</p>
+        {newMsgIndicator}
       </div>
     ) : (
       <div className="flex flex-col gap-1">
@@ -84,28 +96,22 @@ const MessageRow: FC<MessageRowProps> = ({
           {lastMsgFrom}:
         </p>
         <div className="flex items-center justify-between">
-          <p className="text-xs leading-none line-clamp-1">{lastMsg}</p>
-          {readIndicator}
+          <p className="text-xs line-clamp-1">{lastMsg}</p>
+          {newMsgIndicator}
         </div>
       </div>
     );
 
   return (
-    <div className="flex gap-4 w-full py-[1.375rem] border-b last:border-b-0 border-b-accent">
+    <div onClick={onClick} className="flex gap-4 w-full py-[1.375rem] border-b last:border-b-0 border-b-accent">
       <div>{profilePic}</div>
-      <div className="flex flex-col gap-2 w-full">
+      <div className="flex flex-col gap-2 w-full select-none cursor-pointer">
         <div className="flex gap-4 w-full">
           <p className="flex-grow-1 line-clamp-2 font-bold leading-tight text-primary">
             {title}
           </p>
           <p className="flex-shrink-0 text-xs leading-5">
-            {lastMsgTime.toLocaleString(undefined, {
-              year: 'numeric',
-              month: read ? 'numeric' : 'long',
-              day: 'numeric',
-              hour: 'numeric',
-              minute: 'numeric',
-            })}
+            {format(lastMsgAt, dateFormat)}
           </p>
         </div>
         <div className="w-full">{lastMessage}</div>
@@ -114,4 +120,4 @@ const MessageRow: FC<MessageRowProps> = ({
   );
 };
 
-export default MessageRow;
+export default ChatRow;

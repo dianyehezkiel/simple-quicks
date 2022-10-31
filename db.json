@@ -1,0 +1,328 @@
+{
+  "chats": [
+    {
+      "id": 1,
+      "participants": 3,
+      "lastCheckedAt": "2022/10/31 12:08:22",
+      "messages": [
+        {
+          "content": "Just fill me in for his update yea?",
+          "sentAt": "2022/10/29 19:31:00",
+          "lastEditedAt": "2022/10/29 19:31:00",
+          "editHistory": [],
+          "from": "Mary Hilda"
+        },
+        {
+          "content": "No worries, it will be completed ASAP. I've asked him yesterday.",
+          "sentAt": "2022/10/29 19:32:00",
+          "lastEditedAt": "2022/10/29 19:32:00",
+          "editHistory": [],
+          "from": "Dian Yehezkiel"
+        },
+        {
+          "content": "Hello Obaidullah, I will be your case advisor for case #029290.",
+          "sentAt": "2022/10/30 09:32:00",
+          "lastEditedAt": "2022/10/30 09:32:00",
+          "editHistory": [],
+          "from": "Mary Hilda"
+        },
+        {
+          "content": "Please contact Mary for questions regarding the case bcs she will be managing your forms from now on! Thanks Mary.",
+          "sentAt": "2022/10/30 09:33:00",
+          "lastEditedAt": "2022/10/30 09:33:00",
+          "editHistory": [],
+          "from": "Dian Yehezkiel"
+        },
+        {
+          "content": "Sure thing, Dian",
+          "sentAt": "2022/10/30 09:33:20",
+          "lastEditedAt": "2022/10/30 09:33:40",
+          "editHistory": [
+            {
+              "content": "Surething, Dyan",
+              "edited": "2022/10/30 09:33:20"
+            }
+          ],
+          "from": "Mary Hilda"
+        },
+        {
+          "content": "Morning, I'll try to do them. Thanks!",
+          "sentAt": "2022/10/30 09:34:00",
+          "lastEditedAt": "2022/10/30 09:34:00",
+          "editHistory": [],
+          "from": "Obaidullah Amarkhil"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "participants": 3,
+      "lastCheckedAt": "2022/10/31 11:52:14",
+      "messages": [
+        {
+          "content": "Just fill me in for his update yea?",
+          "sentAt": "2022/10/29 19:31:00",
+          "lastEditedAt": "2022/10/29 19:31:00",
+          "editHistory": [],
+          "from": "Mary Hilda"
+        },
+        {
+          "content": "No worries, it will be completed ASAP. I've asked him yesterday.",
+          "sentAt": "2022/10/29 19:32:00",
+          "lastEditedAt": "2022/10/29 19:32:00",
+          "editHistory": [],
+          "from": "Dian Yehezkiel"
+        },
+        {
+          "content": "Hello Obaidullah, I will be your case advisor for case #029290.",
+          "sentAt": "2022/10/30 09:32:00",
+          "lastEditedAt": "2022/10/30 09:32:00",
+          "editHistory": [],
+          "from": "Mary Hilda"
+        },
+        {
+          "content": "Please contact Mary for questions regarding the case bcs she will be managing your forms from now on! Thanks Mary.",
+          "sentAt": "2022/10/30 09:33:00",
+          "lastEditedAt": "2022/10/30 09:33:00",
+          "editHistory": [],
+          "from": "Dian Yehezkiel"
+        },
+        {
+          "content": "Sure thing, Dian",
+          "sentAt": "2022/10/30 09:33:40",
+          "lastEditedAt": "2022/10/30 09:33:40",
+          "editHistory": [],
+          "from": "Mary Hilda"
+        },
+        {
+          "content": "Morning, I'll try to do them. Thanks!",
+          "sentAt": "2022/10/30 09:34:00",
+          "lastEditedAt": "2022/10/30 09:34:00",
+          "editHistory": [],
+          "from": "Obaidullah Amarkhil"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "participants": 3,
+      "lastCheckedAt": "2022/10/31 01:24:47",
+      "messages": [
+        {
+          "content": "Just fill me in for his update yea?",
+          "sentAt": "2022/10/29 19:31:00",
+          "lastEditedAt": "2022/10/29 19:31:00",
+          "editHistory": [],
+          "from": "Mary Hilda"
+        },
+        {
+          "content": "No worries, it will be completed ASAP. I've asked him yesterday.",
+          "sentAt": "2022/10/29 19:32:00",
+          "lastEditedAt": "2022/10/29 19:32:00",
+          "editHistory": [],
+          "from": "Dian Yehezkiel"
+        },
+        {
+          "content": "Hello Obaidullah, I will be your case advisor for case #029290.",
+          "sentAt": "2022/10/30 09:32:00",
+          "lastEditedAt": "2022/10/30 09:32:00",
+          "editHistory": [],
+          "from": "Mary Hilda"
+        },
+        {
+          "content": "Please contact Mary for questions regarding the case bcs she will be managing your forms from now on! Thanks Mary.",
+          "sentAt": "2022/10/30 09:33:00",
+          "lastEditedAt": "2022/10/30 09:33:00",
+          "editHistory": [],
+          "from": "Dian Yehezkiel"
+        },
+        {
+          "content": "Sure thing, Dian",
+          "sentAt": "2022/10/30 09:33:40",
+          "lastEditedAt": "2022/10/30 09:33:40",
+          "editHistory": [],
+          "from": "Mary Hilda"
+        },
+        {
+          "content": "Morning, I'll try to do them. Thanks!",
+          "sentAt": "2022/10/30 09:34:00",
+          "lastEditedAt": "2022/10/30 09:34:00",
+          "editHistory": [],
+          "from": "Obaidullah Amarkhil"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "lastCheckedAt": "2022/10/30 09:33:00",
+      "messages": [
+        {
+          "content": "Just fill me in for his update yea?",
+          "sentAt": "2022/10/29 19:31:00",
+          "lastEditedAt": "2022/10/29 19:31:00",
+          "editHistory": [],
+          "from": "FastVisa Support"
+        },
+        {
+          "content": "No worries, it will be completed ASAP. I've asked him yesterday.",
+          "sentAt": "2022/10/29 19:32:00",
+          "lastEditedAt": "2022/10/29 19:32:00",
+          "editHistory": [],
+          "from": "Dian Yehezkiel"
+        },
+        {
+          "content": "Hello Obaidullah, I will be your case advisor for case #029290.",
+          "sentAt": "2022/10/30 09:32:00",
+          "lastEditedAt": "2022/10/30 09:32:00",
+          "editHistory": [],
+          "from": "FastVisa Support"
+        },
+        {
+          "content": "Please contact Mary for questions regarding the case bcs she will be managing your forms from now on! Thanks Mary.",
+          "sentAt": "2022/10/30 09:33:00",
+          "lastEditedAt": "2022/10/30 09:33:00",
+          "editHistory": [],
+          "from": "Dian Yehezkiel"
+        },
+        {
+          "content": "Sure thing, Dian",
+          "sentAt": "2022/10/30 09:33:40",
+          "lastEditedAt": "2022/10/30 09:33:40",
+          "editHistory": [],
+          "from": "FastVisa Support"
+        },
+        {
+          "content": "Morning, I'll try to do them. Thanks!",
+          "sentAt": "2022/10/30 09:34:00",
+          "lastEditedAt": "2022/10/30 09:34:00",
+          "editHistory": [],
+          "from": "FastVisa Support"
+        }
+      ]
+    }
+  ],
+  "inbox": [
+    {
+      "id": 1,
+      "type": "group",
+      "title": "109220-Naturalization",
+      "lastMsg": "Morning, I'll try to do them. Thanks!",
+      "lastMsgAt": "2022/10/30 09:34:00",
+      "lastMsgFrom": "Obaidullah Amarkhil",
+      "lastCheckedAt": "2022/10/31 12:08:22",
+      "participants": 3
+    },
+    {
+      "id": 2,
+      "type": "group",
+      "title": "Jeannette Moraima Guaman Chamba (Hutto I-589)",
+      "lastMsg": "Morning, I'll try to do them. Thanks!",
+      "lastMsgAt": "2022/10/30 09:34:00",
+      "lastMsgFrom": "Obaidullah Amarkhil",
+      "lastCheckedAt": "2022/10/31 11:52:14",
+      "participants": 3
+    },
+    {
+      "id": 3,
+      "type": "group",
+      "title": "8405-Diana Salazar Munguia",
+      "lastMsg": "Morning, I'll try to do them. Thanks!",
+      "lastMsgAt": "2022/10/30 09:34:00",
+      "lastMsgFrom": "Obaidullah Amarkhil",
+      "lastCheckedAt": "2022/10/31 01:24:47",
+      "participants": 3
+    },
+    {
+      "id": 4,
+      "type": "personal",
+      "title": "FastVisa Support",
+      "lastMsg": "Morning, I'll try to do them. Thanks!",
+      "lastMsgAt": "2022/10/30 09:34:00",
+      "lastMsgFrom": "FastVisa Support",
+      "lastCheckedAt": "2022/10/30 09:33:00"
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "name": "My Tasks 1",
+      "taskList": [
+        {
+          "id": 1,
+          "title": "Lorem ipsum dolor sit amet",
+          "deadlineAt": "2022/10/30",
+          "desc": "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "done": true
+        },
+        {
+          "id": 2,
+          "title": "Ut enim ad minim veniam",
+          "deadlineAt": "2022-10-31",
+          "desc": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "done": false
+        },
+        {
+          "id": 3,
+          "title": "Excepteur sint occaecat cupidatat",
+          "deadlineAt": "2022/11/01",
+          "desc": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "My Tasks 2",
+      "taskList": [
+        {
+          "id": 1,
+          "title": "#Lorem ipsum dolor sit amet",
+          "deadlineAt": "2022/10/30",
+          "desc": "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "done": false
+        },
+        {
+          "id": 2,
+          "title": "#Ut enim ad minim veniam",
+          "deadlineAt": "2022/10/31",
+          "desc": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "done": true
+        },
+        {
+          "id": 3,
+          "title": "#Excepteur sint occaecat cupidatat",
+          "deadlineAt": "2022/11/01",
+          "desc": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "My Tasks 3",
+      "taskList": [
+        {
+          "id": 1,
+          "title": "@Lorem ipsum dolor sit amet",
+          "deadlineAt": "2022/10/30",
+          "desc": "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "done": false
+        },
+        {
+          "id": 2,
+          "title": "@Ut enim ad minim veniam",
+          "deadlineAt": "2022/10/31",
+          "desc": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "done": false
+        },
+        {
+          "id": 3,
+          "title": "@Excepteur sint occaecat cupidatat",
+          "deadlineAt": "2022/11/01",
+          "desc": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "done": true
+        }
+      ]
+    }
+  ]
+}

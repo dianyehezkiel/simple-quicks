@@ -1,41 +1,52 @@
 import { FC, MouseEventHandler } from 'react';
+import { classNames } from '../../lib/utils';
 
 type TaskButtonProps = {
   showButton: boolean;
   showLabel: boolean;
-  selected: boolean;
+  opened: boolean;
+  focused: boolean;
   onClick: MouseEventHandler<HTMLButtonElement>;
 };
 
 const TaskButton: FC<TaskButtonProps> = ({
   showButton,
   showLabel,
-  selected,
+  opened,
+  focused,
   onClick,
 }) => {
-  const showHideButton = showButton
-    ? '-rotate-0 -translate-x-[10.25rem]'
-    : 'rotate-0 translate-x-0 delay-100';
-
-  const showHideLabel = showLabel
-    ? 'translate-y-0 opacity-100 delay-150'
-    : 'translate-y-12 opacity-0';
-
-  const selectButton = selected
-    ? 'w-16 h-16 bg-indicator-orange hover:bg-indicator-orange'
-    : 'w-14 h-14';
-
   return (
     <div
-      className={`fixed flex flex-col gap-3 items-center justify-between transition-transform ease-in 
-      ${selected ? ' bottom-6 right-8 z-50' : 'bottom-7 right-9'} ${showHideButton}`}
+      className={classNames(
+        'fixed flex flex-col gap-3 items-center justify-between transition-transform ease-in select-none',
+        showButton && !focused
+          ? '-rotate-0 -translate-x-[10.25rem]'
+          : 'rotate-0 translate-x-0',
+        showButton ? '' : 'delay-100',
+        focused ? 'bottom-6 right-8 z-50 translate-x-0' : 'bottom-7 right-9',
+      )}
     >
-      <p className={`transition-all ease-in duration-100 ${showHideLabel}`}>
+      <p
+        className={classNames(
+          'transition-all ease-in duration-100 -z-10',
+          showLabel
+            ? 'translate-y-0 opacity-100 delay-150'
+            : 'translate-y-12 opacity-0',
+        )}
+      >
         Task
       </p>
-      <button onClick={onClick} className={`btn btn-circle transition-all border-none ${selectButton}`}>
+      <button
+        onClick={onClick}
+        className={classNames(
+          `btn btn-circle transition-all border-none`,
+          focused ? 'w-16 h-16' : 'w-14 h-14',
+          opened ? 'bg-indicator-orange hover:bg-indicator-orange' : '',
+        )}
+      >
         <svg
-          className={selected ? 'fill-white' : 'fill-indicator-orange'}
+          className={opened ? 'fill-white' : 'fill-indicator-orange'}
           width="26"
           height="20"
           viewBox="0 0 26 20"
