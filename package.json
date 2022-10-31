@@ -6,7 +6,7 @@
     "dev:server": "json-server db.json --port 5000",
     "dev:ui": "next dev",
     "dev": "npm run dev:server & npm run dev:ui",
-    "build": "next build",
+    "build": "npm run dev:server & next build",
     "start": "next start",
     "lint": "next lint"
   },
