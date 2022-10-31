@@ -26,7 +26,7 @@ const Chat: FC<ChatProps> = ({ chatId, type, title, participants, onClose }) => 
       setChat(chatJson);
       setTimeout(() => {
         setLoading(false);
-      }, 500);
+      }, 300);
     };
 
     fetchChat();
