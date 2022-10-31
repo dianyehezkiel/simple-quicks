@@ -5,12 +5,13 @@
   "scripts": {
     "dev:server": "json-server db.json --port 5000",
     "dev:ui": "next dev",
-    "dev": "npm run dev:server & npm run dev:ui",
-    "build": "npm run dev:server & next build",
-    "start": "next start",
+    "dev": "cross-env NODE_ENV=development npm run dev:server & npm run dev:ui",
+    "build": "next build",
+    "start": "cross-env NODE_ENV=production next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "cross-env": "^7.0.3",
     "daisyui": "^2.33.0",
     "date-fns": "^2.29.3",
     "json-server": "^0.17.0",
