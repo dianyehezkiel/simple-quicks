@@ -2,7 +2,7 @@ import { NextApiHandler } from 'next';
 import { SERVER_URL } from '../../../../lib/constants';
 import { isString } from '../../../../lib/utils';
 
-const ChatHandler: NextApiHandler = async (req, res) => {
+const CheckHandler: NextApiHandler = async (req, res) => {
   try {
     const S_URL = SERVER_URL;
     if (!S_URL) {
@@ -17,7 +17,6 @@ const ChatHandler: NextApiHandler = async (req, res) => {
 
     if (req.method === 'PATCH') {
       const lastCheckedAt = req.body;
-      console.log(lastCheckedAt)
 
       const chatResponse = await fetch(`${S_URL}/chats/${id}`, {
         method: 'PATCH',
@@ -42,4 +41,4 @@ const ChatHandler: NextApiHandler = async (req, res) => {
   }
 };
 
-export default ChatHandler;
+export default CheckHandler;

@@ -1,8 +1,8 @@
 import { format } from 'date-fns';
-import { FC, FormEventHandler, MouseEventHandler, useEffect, useState } from 'react';
-import { user } from '../../lib/constants';
-import { Chat, ChatType, Message } from '../../lib/types';
-import LoadingSpinner from '../LoadingSpinner';
+import { FC, MouseEventHandler, useEffect, useState } from 'react';
+import { user } from '../../../lib/constants';
+import { Chat, ChatType, Message } from '../../../lib/types';
+import LoadingSpinner from '../../LoadingSpinner';
 import MessageComp from './Message';
 
 type ChatProps = {

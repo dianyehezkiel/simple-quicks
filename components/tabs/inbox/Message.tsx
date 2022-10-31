@@ -1,7 +1,7 @@
 import { format } from 'date-fns';
 import { FC } from 'react';
-import { user } from '../../lib/constants';
-import { classNames } from '../../lib/utils';
+import { user } from '../../../lib/constants';
+import { classNames } from '../../../lib/utils';
 
 type MessageProps = {
   content: string;

@@ -12,8 +12,6 @@ type QuicksTabProps = {
 }
 
 const QuicksTab: FC<QuicksTabProps> = ({ openedTab, focusedTab }) => {
-  const [openTask, setOpenTask] = useState(false)
-  const [openInbox, setOpenInbox] = useState(false)
 
   return (
     <div>

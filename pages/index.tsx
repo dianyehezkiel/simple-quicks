@@ -1,13 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { MouseEventHandler, useState } from 'react'
-import InboxButton from '../components/buttons/InboxButton'
-import InboxTab from '../components/tabs/InboxTab'
-import MainButton from '../components/buttons/MainButton'
-import TaskButton from '../components/buttons/TaskButton'
-import TaskTab from '../components/tabs/TaskTab'
 import styles from '../styles/Home.module.css'
 import Quicks from '../components/Quicks'
+import Task from '../components/tabs/task/Task'
 
 const Home: NextPage = () => {
   return (
@@ -22,7 +17,6 @@ const Home: NextPage = () => {
         <h1 className={styles.title}>
           Welcome to Quicks
         </h1>
-        
         <Quicks />
       </main>
     </div>

@@ -19,7 +19,7 @@ const InboxButton: FC<InboxButtonProps> = ({
   return (
     <div
       className={classNames(
-        'fixed flex flex-col gap-3 items-center justify-between transition-transform ease-in',
+        'fixed flex flex-col gap-3 items-center justify-between transition-transform ease-in select-none',
         showButton && !focused
           ? '-rotate-0 -translate-x-[5.25rem]'
           : 'rotate-0 translate-x-0',
@@ -29,7 +29,7 @@ const InboxButton: FC<InboxButtonProps> = ({
     >
       <p
         className={classNames(
-          'transition-all ease-in duration-100',
+          'transition-all ease-in duration-100 -z-10',
           showLabel
             ? 'translate-y-0 opacity-100 delay-150'
             : 'translate-y-12 opacity-0',

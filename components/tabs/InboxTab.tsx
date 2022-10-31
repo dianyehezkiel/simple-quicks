@@ -1,7 +1,7 @@
 import { FC, useEffect, useState } from 'react';
 import { ChatInbox, Inbox } from '../../lib/types';
-import Chat from './Chat';
-import InboxComp from './Inbox';
+import Chat from './inbox/Chat';
+import InboxComp from './inbox/Inbox';
 import TabContainer from './TabContainer';
 
 type InboxTabProps = {

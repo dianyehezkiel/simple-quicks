@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from "react";
-import { ChatInbox, Inbox } from "../../lib/types";
-import LoadingSpinner from "../LoadingSpinner";
+import { ChatInbox, Inbox } from "../../../lib/types";
+import LoadingSpinner from "../../LoadingSpinner";
 import ChatRow from "./ChatRow";
 
 type InboxProps = {

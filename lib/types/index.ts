@@ -32,3 +32,17 @@ export interface ChatInbox {
 }
 
 export type Inbox = ChatInbox[];
+
+export type Task = {
+  id: number;
+  title: string;
+  deadlineAt: string;
+  desc: string;
+  done: boolean;
+};
+
+export type TaskGroup = {
+  id: number;
+  name: string;
+  taskList: Task[];
+};
