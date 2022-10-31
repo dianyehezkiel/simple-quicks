@@ -13,6 +13,10 @@ type TaskProps = {
 
 const Task: FC<TaskProps> = ({ id, title, deadlineAt, desc, done, onChange }) => {
   const [isDone, setIsDone] = useState(done);
+
+  useEffect(() => {
+    setIsDone(done);
+  }, [done])
   
   const updateDone: ChangeEventHandler<HTMLInputElement> = () => {
     const updatedDone = !isDone
@@ -28,7 +32,7 @@ const Task: FC<TaskProps> = ({ id, title, deadlineAt, desc, done, onChange }) =>
   }
 
   return (
-    <div className="flex gap-2 py-[1.375rem] rounded border-b border-b-accent rounded-none">
+    <div className="flex gap-2 py-[1.375rem] border-b border-b-accent rounded-none">
       <input
         type="checkbox"
         checked={isDone}

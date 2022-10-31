@@ -27,7 +27,7 @@ const Inbox: FC<InboxProps> = ({ inbox, loading, selectChat }) => {
 
 
   return (
-    <div className="flex flex-col items-center w-full h-full">
+    <div className="flex flex-col items-center w-full h-full overflow-x-hidden overflow-y-scroll">
         <div className="relative w-full">
           <input
             type="text"
